@@ -3,6 +3,7 @@ package io.univ.rouen.smartclass.weightpoc.simulators;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.time.LocalDate;
@@ -16,6 +17,9 @@ import java.util.UUID;
 @Document(collection = "data")
 public class Data {
 
+    @Id
+    private long id;
+
     final static int MAX_LIST_ELEMENT = 500;
 
     private String stringData;
@@ -28,6 +32,14 @@ public class Data {
     private LocalDate localDate;
 
     private List<Double> listIntData;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public static int getMaxListElement() {
         return MAX_LIST_ELEMENT;
@@ -97,6 +109,7 @@ public class Data {
     @Override
     public String toString() {
         return "Data{" +
+                "id='" + id + '\'' +
                 "stringData='" + stringData + '\'' +
                 ", longData=" + longData +
                 ", doubleData=" + doubleData +
