@@ -1,10 +1,13 @@
 package io.univ.rouen.smartclass.weightpoc.entities;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.*;
 import java.time.ZonedDateTime;
 
 @Entity
 @Table(name = "time_slot")
+@Document(collection = "time_slot")
 public class TimeSlot {
 
     @Id

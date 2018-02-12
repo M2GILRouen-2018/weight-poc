@@ -1,10 +1,13 @@
 package io.univ.rouen.smartclass.weightpoc.entities;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "chu")
+@Document(collection = "historic")
 public class ClassroomUserHistoric {
 
     @Id
