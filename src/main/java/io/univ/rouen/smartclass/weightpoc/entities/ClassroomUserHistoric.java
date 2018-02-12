@@ -61,4 +61,9 @@ public class ClassroomUserHistoric {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "ClassroomId : " + this.getClassroomId() + " and userId : " + this.getUserId() + " -> " + this.getDate();
+    }
 }
