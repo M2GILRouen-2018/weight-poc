@@ -1,7 +1,5 @@
 package io.univ.rouen.smartclass.weightpoc.simulators;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
@@ -14,7 +12,7 @@ import java.util.Random;
 import java.util.UUID;
 
 @Entity
-@Document(collection = "data")
+//@Document(collection = "data")
 public class Data {
 
     @Id
