@@ -1,28 +1,33 @@
 package io.univ.rouen.smartclass.weightpoc.entities;
 
-import javax.persistence.Entity;
-import java.util.Date;
+import javax.persistence.*;
+import java.time.ZonedDateTime;
 
 @Entity
+@Table(name = "time_slot")
 public class TimeSlot {
 
-    private Date in;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    private Date out;
+    private ZonedDateTime in;
 
-    public Date getIn() {
+    private ZonedDateTime out;
+
+    public ZonedDateTime getIn() {
         return in;
     }
 
-    public void setIn(Date in) {
+    public void setIn(ZonedDateTime in) {
         this.in = in;
     }
 
-    public Date getOut() {
+    public ZonedDateTime getOut() {
         return out;
     }
 
-    public void setOut(Date out) {
+    public void setOut(ZonedDateTime out) {
         this.out = out;
     }
 }
